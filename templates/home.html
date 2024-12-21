@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sahla - الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="static/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">سهلة</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="animated-text">مرحبًا بكم في سهلة</h1>
+            <p class="subtitle">محلل المنتجات بالذكاء الاصطناعي</p>
+            <div class="example-container">
+                <div class="example-item">
+                    <div class="example-image">
+                        <img src="https://i.postimg.cc/gjvYjPrx/kafsudha-syrup-500x500.webp" alt="مثال 1" loading="lazy">
+                        <div class="overlay">
+                            <span>قبل التحليل</span>
+                        </div>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="example-image">
+                        <img src="https://i.postimg.cc/8cq6QG9s/Screenshot-2024-12-14-163911.png" alt="نتيجة 1" loading="lazy">
+                        <div class="overlay">
+                            <span>بعد التحليل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="{{ url_for('index') }}" class="cta-button">جرّب الآن</a>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>تحليل ذكي</h3>
+                <p>التعرف الفوري على المنتجات والمعلومات التفصيلية</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>نتائج سريعة</h3>
+                <p>احصل على التحليل في ثوانٍ</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>سهل الاستخدام</h3>
+                <p>تحميل بسيط ونتائج فورية</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>تطوير: Akwa</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navBar = document.querySelector('.nav-bar');
+
+            navToggle.addEventListener('click', () => {
+                navBar.classList.toggle('nav-open');
+            });
+        });
+    </script>
+</body>
+</html>
