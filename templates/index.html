@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahla - تحليل المنتوجات</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">Sahla</div>
+        <a href="{{ url_for('home') }}" class="nav-button">Home</a>
+    </nav>
+
+    <main>
+        <section class="upload-section">
+            <h1>تحليل المنتوجات</h1>
+            <p>صيفط تصويرة المنتوج باش تشوف التحليل ديالو</p>
+            
+            <div class="upload-container">
+                <div class="upload-box" id="dropZone">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8191/8191581.png" alt="Upload" id="previewImage">
+                    <p>كليكي هنا ولا جر التصويرة</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <button id="analyzeBtn" disabled>حلل المنتوج</button>
+        </section>
+
+        <div class="loading-animation" id="loadingAnimation" style="display: none;">
+            <div class="analysis-progress">
+                <div class="scanner"></div>
+                <img id="analyzing-image" src="" alt="كنحلل">
+            </div>
+            <p class="loading-text">صبر شوية... كنحلل المنتوج</p>
+        </div>
+
+        <section class="result-section" id="resultSection" style="display: none;">
+            <div class="result-container">
+                <h2>نتيجة التحليل</h2>
+                <div class="result-content" id="resultContent">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <div class="developer-name" id="developerName">
+            <p>Developed by: Akwa</p>
+        </div>
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
